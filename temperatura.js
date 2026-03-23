@@ -9,3 +9,5 @@ const variacaoDiaria = 26.3 - tempCelsius;
 
 console.log(`Temperatura em ${cidade} hoje está ${tempCelsius}.`);
 console.log(`${tempCelsius}`);
+console.log(`Fahrenheit: ${tempFahrenheit.toFixed(1)}Fº`);
+console.log(`Kelvin: ${tempKelvin}`);
