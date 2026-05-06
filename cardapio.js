@@ -25,3 +25,24 @@ function calcularTotal(listaPedido) {
     let total = listaPedido[0].preco + listaPedido[1].preco;
     return total;
 }
+
+function calcularComDesconto(total, clienteObj) {
+    if (clienteObj.fidelidade === true) {
+        let desconto = total * 0.10;
+        console.log(`Desconto fidelidade: R${desconto}`);
+        return total - desconto;
+        }
+        return total;
+}
+
+function exibirPedido(listaPedido){
+    console.log("===SEU PEDIDO===");
+    console.log(`1. ${listaPedido[0].nome} - R$ ${listaPedido[0].preco} - ${lista[0].categoria}`)
+    console.log(`2. ${listaPedido[1].nome} - R$ ${listaPedido[1].preco} - ${lista[1].categoria}`)
+    console.log(`3. ${listaPedido[2].nome} - R$ ${listaPedido[2].preco} - ${lista[2].categoria}`)
+    console.log(`4. ${listaPedido[3].nome} - R$ ${listaPedido[3].preco} - ${lista[3].categoria}`)
+    console.log(`TOTAL: R$ ${calcularTotaL(listaPedido)}`);
+}
+
+exibirCardapio(cardapio);
+exibirPedido(pedido);
