@@ -35,13 +35,15 @@ function calcularComDesconto(total, clienteObj) {
         return total;
 }
 
-function exibirPedido(listaPedido){
+function exibirPedido(listaPedido, clienteObj){
     console.log("===SEU PEDIDO===");
     console.log(`1. ${listaPedido[0].nome} - R$ ${listaPedido[0].preco} - ${lista[0].categoria}`)
     console.log(`2. ${listaPedido[1].nome} - R$ ${listaPedido[1].preco} - ${lista[1].categoria}`)
-    console.log(`3. ${listaPedido[2].nome} - R$ ${listaPedido[2].preco} - ${lista[2].categoria}`)
-    console.log(`4. ${listaPedido[3].nome} - R$ ${listaPedido[3].preco} - ${lista[3].categoria}`)
     console.log(`TOTAL: R$ ${calcularTotaL(listaPedido)}`);
+
+    let subtotal = calcularTotal(listaPedido)
+    let totalFinal = calcularComDesconto(subtotal, clienteObj);
+    console.log(`TOTAL FINAL: R$ ${totalFinal}`)
 }
 
 exibirCardapio(cardapio);
